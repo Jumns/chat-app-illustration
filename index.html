@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link rel="stylesheet" href="./main.css" />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="bg-left bg"></div>
+      <div class="bg-right bg"></div>
+      <div class="app-container">
+        <div class="app">
+          <!-- user info -->
+          <div class="app-header">
+            <div class="speaker"></div>
+            <div class="details">
+              <span class="back-btn"></span>
+              <img src="./images/avatar.jpg" class="avatar" alt="user-avatar" />
+              <div class="username-n-status">
+                <h2>Samuel Green</h2>
+                <span class="status"> Available to Walk </span>
+              </div>
+              <span class="ellipsis"></span>
+            </div>
+          </div>
+          <!-- chat starts -->
+          <div class="chat">
+            <p class="left-msg message">
+              That sounds great. I’d be happy with that.
+            </p>
+            <p class="left-msg message">
+              Could you send over some pictures of your dog, please?
+            </p>
+
+            <div class="sent-imgs">
+              <a href="./images/dog-image-1.jpg"
+                ><img src="./images/dog-image-1.jpg" alt="sent-img"
+              /></a>
+              <a href="./images/dog-image-2.jpg"
+                ><img src="./images/dog-image-2.jpg" alt="sent-img"
+              /></a>
+              <a href="./images/dog-image-3.jpg"
+                ><img src="./images/dog-image-3.jpg" alt="sent-img"
+              /></a>
+            </div>
+            <p class="right-msg message">
+              Here are a few pictures. She’s a happy girl! .
+            </p>
+            <p class="right-msg message">Can you make it?</p>
+            <p class="left-msg message">
+              She looks so happy! The time we discussed works. How long shall I
+              take her out for?
+            </p>
+            <div class="price-div">
+              <span class="radio-btn"></span>
+              <span class="walk-time">30 minute walk</span>
+              <span class="price">&dollar;29</span>
+            </div>
+            <div class="price-div">
+              <span class="radio-btn"></span>
+              <span class="walk-time">1 hour walk</span>
+              <span class="price">&dollar;49</span>
+            </div>
+            <form action="">
+              <div class="enter-msg">
+                <input
+                  type="text"
+                  name=""
+                  placeholder="Type a message..."
+                  id=""
+                />
+                <span class="send-btn"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="booking">
+          <h1 class="heading">Simple booking</h1>
+          <p class="paragraph">
+            Stay in touch with our dog walkers through the chat interface. This
+            makes it easy to discuss arrangements and make bookings. Once the
+            walk has been completed you can rate your walker and book again all
+            through the chat.
+          </p>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. <br />
+        Coded by <a href="https://www.jnathan.com.ng">Nathan</a>.
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,381 @@
+:root {
+  /* primary */
+  --pale-violet: hsl(276, 100%, 81%);
+  --moderate-violet: hsl(276, 55%, 52%);
+  --desaturated-dark-violet: hsl(271, 15%, 43%);
+  --grayish-blue: hsl(206, 6%, 79%);
+  --dark-grayish-violet: hsl(270, 7%, 64%);
+
+  /* gradient */
+  --light-magenta: hsl(293, 100%, 63%);
+  --light-violet: hsl(264, 100%, 61%);
+
+  /* secondary */
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 20%, 96%);
+  --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+  --very-light-magenta: hsl(289, 100%, 72%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 10px;
+  font-family: "Rubik", sans-serif;
+  background: rgb(248, 248, 248);
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: inherit;
+}
+/* attribution */
+.attribution {
+  font-size: 13px;
+  color: var(--dark-grayish-violet);
+  text-align: center;
+  margin: 1em 0;
+  padding: 2em;
+}
+.attribution a {
+  background-image: linear-gradient(
+    to left,
+    var(--very-light-magenta),
+    var(--moderate-violet)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+/* backgrounds */
+.bg {
+  height: 65vh;
+  width: 50vw;
+  z-index: -1;
+  position: absolute;
+}
+.bg-left {
+  background: linear-gradient(
+    to bottom,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 75%;
+}
+
+.bg-right {
+  background: rgb(252, 252, 252);
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 75%;
+}
+
+.app {
+  width: calc(23.5rem * 0.65);
+  height: calc(48.2rem * 0.65);
+  background-color: var(--light-grayish-violet);
+  border-radius: 2rem;
+  margin: 1em auto 2em auto;
+  border: 10px solid #fff;
+  overflow: hidden;
+  box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* imgs */
+
+.sent-imgs {
+  align-self: flex-end;
+}
+
+.sent-imgs img {
+  width: 40px;
+  border-radius: 7px;
+  margin-right: 2px;
+  margin-bottom: 0.5em;
+}
+
+.avatar {
+  width: 50px;
+}
+
+/* header */
+.app-header {
+  background: linear-gradient(
+    to right,
+    var(--light-violet),
+    var(--very-light-magenta)
+  );
+  padding: 0.8em 1.2em;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.7rem;
+}
+
+.details .username-n-status {
+  color: #fff;
+}
+
+.speaker {
+  width: 150px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: -18px;
+}
+
+.status {
+  color: hsl(276, 100%, 81%);
+  font-style: 500;
+}
+
+.back-btn {
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 40px;
+  margin-right: 0.5em;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.ellipsis {
+  background-color: #fff;
+  width: 2px;
+  height: 2px;
+  position: relative;
+  margin-left: auto;
+}
+
+.ellipsis::before {
+  top: -4px;
+}
+.ellipsis::after {
+  top: 4px;
+}
+.ellipsis::before,
+.ellipsis::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+}
+
+/* chat */
+.chat {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8em;
+}
+.message {
+  max-width: 80%;
+  padding: 0.5rem;
+  border-radius: 1em;
+  margin-bottom: 0.7em;
+}
+
+.right-msg {
+  background-color: #fff;
+  align-self: flex-end;
+  border-bottom-right-radius: 0.5em;
+  color: hsl(271, 15%, 43%);
+}
+
+.left-msg {
+  background-color: hsl(270, 20%, 96%);
+  border-bottom-left-radius: 0.5em;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  color: hsl(276, 55%, 52%);
+}
+
+.chat .price-div {
+  background-image: linear-gradient(
+    to right,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+
+  margin-bottom: 0.5em;
+  max-width: 80%;
+  color: #fff;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 0.7em;
+  border-radius: 1em;
+}
+
+.radio-btn {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin-right: 1rem;
+}
+
+.price-div .price {
+  margin-left: auto;
+  font-weight: 700;
+}
+
+.booking {
+  max-width: 85vw;
+}
+
+.heading {
+  font-size: 1.5rem;
+  color: var(--very-dark-desaturated-violet);
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.paragraph {
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--dark-grayish-violet);
+}
+
+/* enter msg */
+.enter-msg {
+  background-color: #fff;
+  padding: 0.5em;
+  border-radius: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5em;
+}
+input {
+  border: 0;
+  outline: 0;
+  background: #fff;
+}
+
+.send-btn {
+  background-color: hsl(271, 36%, 24%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+}
+.send-btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  padding: 2px;
+  display: inline-block;
+  -webkit-transform: translate(-70%, -50%) rotate(315deg);
+  transform: translate(-70%, -50%) rotate(315deg);
+}
+
+@media screen and (min-width: 650px) {
+  .app-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+  }
+  .bg {
+    height: 80vh;
+    width: 45vw;
+    z-index: -1;
+    position: absolute;
+  }
+
+  .bg-left {
+    border-bottom-right-radius: 20rem;
+  }
+  .bg-right {
+    border-top-left-radius: 20rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-color: #fff;
+  }
+  .app-container {
+    width: 70%;
+    flex-direction: row;
+  }
+
+  .app {
+    margin-top: 5em;
+  }
+
+  .booking {
+    max-width: 40vw;
+    flex-basis: 50%;
+  }
+
+  .bg {
+    width: 35vw;
+    height: 90vh;
+  }
+
+  .bg-left {
+    border-bottom-left-radius: 15rem;
+    border-bottom-right-radius: 15rem;
+    margin-left: -5em;
+  }
+  .bg-right {
+    border-top-right-radius: 15rem;
+    border-top-left-radius: 15rem;
+    margin-right: -5em;
+  }
+
+  .booking {
+    max-width: 60vh;
+  }
+
+  .booking .paragraph,
+  .heading {
+    text-align: left;
+    margin-bottom: 1.5em;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+}
